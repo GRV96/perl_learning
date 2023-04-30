@@ -9,9 +9,12 @@
 push(@an_array_copy, 5);
 $an_array_copy[1] = 53;
 $a_hash_copy{"two"} = 7;
+$a_hash_copy{"three"} = 3;
 
 print "\@an_array: @an_array\n";
 print "\@an_array_copy: @an_array_copy\n";
 
 print "\n\$a_hash{\"two\"}: $a_hash{'two'}\n";
+print "\$a_hash{\"three\"}: $a_hash{'three'}\n";
 print "\$a_hash_copy{\"two\"}: $a_hash_copy{'two'}\n";
+print "\$a_hash_copy{\"three\"}: $a_hash_copy{'three'}\n";
