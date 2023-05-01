@@ -13,19 +13,7 @@ sub average {
 	return $sum / $num_items;
 }
 
-sub factorial {
-	my $number = abs($_[0]);
-	my $factorial = 1;
-
-	while($number > 0) {
-		$factorial *= $number;
-		$number--;
-	}
-
-	return $factorial;
-}
-
-sub gcd {
+sub euclid_gcd {
 	my $a = abs($_[0]);
 	my $b = abs($_[1]);
 
@@ -46,6 +34,29 @@ sub gcd {
 		$a = $b;
 		$b = $r;
 	}
+}
+
+sub factorial {
+	my $number = abs($_[0]);
+	my $factorial = 1;
+
+	while($number > 0) {
+		$factorial *= $number;
+		$number--;
+	}
+
+	return $factorial;
+}
+
+sub gcd {
+	my $a = shift(@_);
+
+	while(scalar @_ > 0) {
+		my $b = shift(@_);
+		$a = euclid_gcd($a, $b);
+	}
+
+	return $a;
 }
 
 sub lcm {

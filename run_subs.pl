@@ -12,9 +12,7 @@ sub run_factorial {
 }
 
 sub run_gcd {
-	my $a = $_[0];
-	my $b = $_[1];
-	print "gcd($a, $b) = " . gcd($a, $b) . "\n";
+	print "gcd(" . join(", ", @_) . ") = " . gcd(@_) . "\n";
 }
 
 sub run_lcm {
@@ -37,9 +35,12 @@ run_gcd(960, 756);
 run_gcd(780, -960);
 run_gcd(51, 21);
 run_gcd(24, 85);
-#run_gcd(, );
-#run_gcd(, );
-#run_gcd(, );
+run_gcd(-16, 48, 24);
+run_gcd(32, 84, 108);
+run_gcd(64, 56, 144, 72);
+run_gcd(27, 96, 48, 60);
+run_gcd(96, 48, 60);
+run_gcd(8, 40, 100);
 print "\n";
 
 run_lcm(2, 3, 4, 5, 7);
