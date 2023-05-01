@@ -41,7 +41,12 @@ run_gcd(64, 56, 144, 72);
 run_gcd(27, 96, 48, 60);
 run_gcd(96, 48, 60);
 run_gcd(8, 40, 100);
+run_gcd(23);
 print "\n";
 
 run_lcm(2, 3, 4, 5, 7);
+run_lcm(36, 48);
+run_lcm(12, 18);
+run_lcm(36, 8);
+run_lcm(19);
 print "\n";
