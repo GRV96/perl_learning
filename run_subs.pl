@@ -3,7 +3,7 @@
 require("./math.pl");
 
 sub run_average {
-	print "Average of @_: " . average(@_) . "\n";
+	print "Average of ". join(", ", @_) . ": " . average(@_) . "\n";
 }
 
 sub run_factorial {
@@ -18,7 +18,7 @@ sub run_gcd {
 }
 
 sub run_lcm {
-	print "lcm(@_) = " . lcm(@_) . "\n";
+	print "lcm(" . join(", ", @_) . ") = " . lcm(@_) . "\n";
 }
 
 run_average(12, 30, 53, 18, 76, 92, 45);
