@@ -12,8 +12,8 @@ sub average {
 }
 
 sub factorial {
-	$number = abs($_[0]);
-	$factorial = 1;
+	my $number = abs($_[0]);
+	my $factorial = 1;
 
 	while($number > 0) {
 		$factorial *= $number;
