@@ -13,7 +13,7 @@ sub average {
 	return $sum / $num_items;
 }
 
-sub euclid_gcd {
+sub _euclid_gcd {
 	my $a = abs($_[0]);
 	my $b = abs($_[1]);
 
@@ -53,7 +53,7 @@ sub gcd {
 
 	while(scalar @_ > 0) {
 		my $b = shift(@_);
-		$a = euclid_gcd($a, $b);
+		$a = _euclid_gcd($a, $b);
 	}
 
 	return $a;
