@@ -50,6 +50,7 @@ sub gcd {
 
 sub lcm {
 	# Calculates the least common multiple of an array of numbers.
+	# https://en.wikipedia.org/wiki/Least_common_multiple#Using_a_simple_algorithm
 	if(scalar @_ < 1) {
 		return -1;
 	}
