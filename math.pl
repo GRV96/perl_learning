@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+require("./num_array_util.pl");
+
 sub average {
 	my $num_items = scalar @_;
 	my $sum = 0;
@@ -44,6 +46,28 @@ sub gcd {
 		$a = $b;
 		$b = $r;
 	}
+}
+
+sub lcm {
+	# Calculates the least common multiple of an array of numbers.
+	if(scalar @_ < 1) {
+		return -1;
+	}
+
+	my @init_nums = ();
+
+	foreach my $num (@_) {
+		push(@init_nums, abs($num));
+	}
+
+	my @numbers = @init_nums;
+
+	until(all_nums_are_equal(@numbers)) {
+		my $min_index = min_index(@numbers);
+		$numbers[$min_index] += $init_nums[$min_index];
+	}
+
+	return $numbers[0];
 }
 
 1;
