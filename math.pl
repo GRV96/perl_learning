@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
-require("./num_array_util.pl");
+use lib "."; # Local directory added to @INC
+require NumArrays;
 
 sub average {
 	my $num_items = scalar @_;
@@ -74,8 +75,8 @@ sub lcm {
 
 	my @numbers = @init_nums;
 
-	until(all_nums_are_equal(@numbers)) {
-		my $min_index = min_index(@numbers);
+	until(NumArrays::all_nums_are_equal(@numbers)) {
+		my $min_index = NumArrays::min_index(@numbers);
 		$numbers[$min_index] += $init_nums[$min_index];
 	}
 

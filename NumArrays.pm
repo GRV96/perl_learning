@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+package NumArrays;
+
 sub all_nums_are_equal {
 	if(scalar @_ < 1) {
 		# False
