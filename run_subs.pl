@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 use lib "."; # Local directory added to @INC
 require Math;
 

@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 package NumArrays;
 
 sub all_nums_are_equal {
@@ -33,7 +36,7 @@ sub min_index {
 	my $min_index = 0;
 	my $min_num = $_[$min_index];
 
-	for($i=1; $i<$length; $i++) {
+	for(my $i=1; $i<$length; $i++) {
 		my $number = $_[$i];
 
 		if($number < $min_num) {

@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 package Math;
 
 use lib "."; # Local directory added to @INC
@@ -9,7 +12,7 @@ sub average {
 	my $num_items = scalar @_;
 	my $sum = 0;
 
-	foreach $number (@_) {
+	foreach my $number (@_) {
 		$sum += $number;
 	}
 
