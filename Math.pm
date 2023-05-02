@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+package Math;
+
 use lib "."; # Local directory added to @INC
 require NumArrays;
 
