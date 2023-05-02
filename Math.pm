@@ -10,7 +10,7 @@ sub average {
 	my $sum = 0;
 
 	foreach $number (@_) {
-		$sum += $number
+		$sum += $number;
 	}
 
 	return $sum / $num_items;
