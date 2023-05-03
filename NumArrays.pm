@@ -5,6 +5,9 @@ use warnings;
 
 package NumArrays;
 
+use Exporter "import";
+our @EXPORT_OK = qw(all_nums_are_equal min_index);
+
 sub all_nums_are_equal {
 	if(scalar @_ < 1) {
 		# False

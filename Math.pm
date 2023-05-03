@@ -5,8 +5,7 @@ use warnings;
 
 package Math;
 
-use lib "."; # Local directory added to @INC
-require NumArrays;
+use NumArrays qw(all_nums_are_equal min_index);
 
 sub average {
 	my $num_items = scalar @_;
@@ -80,8 +79,8 @@ sub lcm {
 
 	my @numbers = @init_nums;
 
-	until(NumArrays::all_nums_are_equal(@numbers)) {
-		my $min_index = NumArrays::min_index(@numbers);
+	until(all_nums_are_equal(@numbers)) {
+		my $min_index = min_index(@numbers);
 		$numbers[$min_index] += $init_nums[$min_index];
 	}
 
