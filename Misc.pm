@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Exporter "import";
-our @EXPORT_OK = qw(is_leap_year);
+our @EXPORT_OK = qw(is_leap_year print_array);
 
 sub is_leap_year {
 	my $year = $_[0];
