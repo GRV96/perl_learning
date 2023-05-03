@@ -4,23 +4,23 @@ use strict;
 use warnings;
 
 use lib "."; # Local directory added to @INC
-require Math;
+use Math qw(average factorial gcd lcm);
 
 sub run_average {
-	print "Average of ". join(", ", @_) . ": " . Math::average(@_) . "\n";
+	print "Average of ". join(", ", @_) . ": " . average(@_) . "\n";
 }
 
 sub run_factorial {
 	my $number = $_[0];
-	print "$number! = " . Math::factorial($number) . "\n";
+	print "$number! = " . factorial($number) . "\n";
 }
 
 sub run_gcd {
-	print "gcd(" . join(", ", @_) . ") = " . Math::gcd(@_) . "\n";
+	print "gcd(" . join(", ", @_) . ") = " . gcd(@_) . "\n";
 }
 
 sub run_lcm {
-	print "lcm(" . join(", ", @_) . ") = " . Math::lcm(@_) . "\n";
+	print "lcm(" . join(", ", @_) . ") = " . lcm(@_) . "\n";
 }
 
 run_average(12, 30, 53, 18, 76, 92, 45);
