@@ -9,7 +9,7 @@ use File::Basename "dirname";
 use lib dirname(abs_path($0));
 
 use Math qw(average factorial gcd lcm);
-use Misc qw(is_leap_year);
+use Misc qw(is_leap_year print_array);
 
 sub run_average {
 	print "Average of ". join(", ", @_) . ": " . average(@_) . "\n";
@@ -32,6 +32,10 @@ sub run_is_leap_year {
 sub run_lcm {
 	print "lcm(" . join(", ", @_) . ") = " . lcm(@_) . "\n";
 }
+
+print "\@INC:\n";
+print_array(@INC);
+print "\n";
 
 run_average(12, 30, 53, 18, 76, 92, 45);
 print "\n";

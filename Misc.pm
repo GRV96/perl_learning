@@ -11,4 +11,11 @@ sub is_leap_year {
 	return ($year%4==0 and $year%100!=0) or $year%400==0;
 }
 
+sub print_array {
+	my $length = scalar @_;
+	for(my $i=0; $i<$length; $i++) {
+		print "[$i]: $_[$i]\n";
+	}
+}
+
 1;
