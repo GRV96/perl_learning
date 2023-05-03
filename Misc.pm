@@ -8,7 +8,7 @@ our @EXPORT_OK = qw(is_leap_year print_array);
 
 sub is_leap_year {
 	my $year = $_[0];
-	return ($year%4==0 and $year%100!=0) or $year%400==0;
+	return ($year%4==0 && $year%100!=0) || $year%400==0;
 }
 
 sub print_array {
