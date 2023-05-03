@@ -8,7 +8,6 @@ package Math;
 use Exporter "import";
 our @EXPORT_OK = qw(average factorial gcd lcm);
 
-use lib "."; # Local directory added to @INC
 use NumArrays qw(all_nums_are_equal min_index);
 
 sub average {
