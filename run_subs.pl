@@ -9,6 +9,7 @@ use File::Basename "dirname";
 use lib dirname(abs_path($0));
 
 use Math qw(average factorial gcd lcm);
+use Misc qw(is_leap_year);
 
 sub run_average {
 	print "Average of ". join(", ", @_) . ": " . average(@_) . "\n";
@@ -21,6 +22,11 @@ sub run_factorial {
 
 sub run_gcd {
 	print "gcd(" . join(", ", @_) . ") = " . gcd(@_) . "\n";
+}
+
+sub run_is_leap_year {
+	my $year = $_[0];
+	print "Leap year $year: " . is_leap_year($year) . "\n";
 }
 
 sub run_lcm {
@@ -50,6 +56,31 @@ run_gcd(27, 96, 48, 60);
 run_gcd(96, 48, 60);
 run_gcd(8, 40, 100);
 run_gcd(23);
+print "\n";
+
+run_is_leap_year(2004);
+run_is_leap_year(2001);
+run_is_leap_year(2000);
+run_is_leap_year(1999);
+run_is_leap_year(1996);
+run_is_leap_year(1900);
+run_is_leap_year(476);
+run_is_leap_year(12);
+run_is_leap_year(6);
+run_is_leap_year(4);
+run_is_leap_year(1);
+run_is_leap_year(0);
+run_is_leap_year(-1);
+run_is_leap_year(-4);
+run_is_leap_year(-6);
+run_is_leap_year(-12);
+run_is_leap_year(-753);
+run_is_leap_year(-1900);
+run_is_leap_year(-1996);
+run_is_leap_year(-1999);
+run_is_leap_year(-2000);
+run_is_leap_year(-2001);
+run_is_leap_year(-2004);
 print "\n";
 
 run_lcm(2, 3, 4, 5, 7);
