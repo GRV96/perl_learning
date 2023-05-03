@@ -18,4 +18,12 @@ sub print_array {
 	}
 }
 
+sub swap_scalars {
+	# The arguments must be two scalar references.
+	my ($refa, $refb) = @_;
+	my $tmp = $$refa;
+	$$refa = $$refb;
+	$$refb = $tmp;
+}
+
 1;
