@@ -1,5 +1,13 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
+package NumArrays;
+
+use Exporter "import";
+our @EXPORT_OK = qw(all_nums_are_equal min_index);
+
 sub all_nums_are_equal {
 	if(scalar @_ < 1) {
 		# False
@@ -31,7 +39,7 @@ sub min_index {
 	my $min_index = 0;
 	my $min_num = $_[$min_index];
 
-	for($i=1; $i<$length; $i++) {
+	for(my $i=1; $i<$length; $i++) {
 		my $number = $_[$i];
 
 		if($number < $min_num) {

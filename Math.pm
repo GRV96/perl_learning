@@ -1,13 +1,21 @@
 #!/usr/bin/perl
 
-require("./num_array_util.pl");
+use strict;
+use warnings;
+
+package Math;
+
+use Exporter "import";
+our @EXPORT_OK = qw(average factorial gcd lcm);
+
+use NumArrays qw(all_nums_are_equal min_index);
 
 sub average {
 	my $num_items = scalar @_;
 	my $sum = 0;
 
-	foreach $number (@_) {
-		$sum += $number
+	foreach my $number (@_) {
+		$sum += $number;
 	}
 
 	return $sum / $num_items;

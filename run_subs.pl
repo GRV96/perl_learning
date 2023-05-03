@@ -1,6 +1,14 @@
 #!/usr/bin/perl
 
-require("./math.pl");
+use strict;
+use warnings;
+
+# Add the local directory's absolute path to @INC.
+use Cwd qw(abs_path cwd);
+use File::Basename "dirname";
+use lib dirname(abs_path($0));
+
+use Math qw(average factorial gcd lcm);
 
 sub run_average {
 	print "Average of ". join(", ", @_) . ": " . average(@_) . "\n";
